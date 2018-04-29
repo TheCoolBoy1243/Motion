@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 namespace Motion {
     class Ball : SpriteGameObject {
-        private float radius;
+        public float radius;
 
         // step 4: Declare variable for the acceleration
         // step 6: Declare variable for the gravity
@@ -21,6 +21,30 @@ namespace Motion {
 
         public override void Update(GameTime gameTime) {
             // step 3: Implement Ball bouncing behaviour
+            if (position.X < 0 + radius)
+            {
+                velocity.X *= -1;
+                position.X = 0 + radius;
+            }
+
+            if (position.X > GameEnvironment.Screen.X - radius)
+            {
+                velocity.X *= -1;
+                position.X = GameEnvironment.Screen.X - radius;
+            }
+
+            if (position.Y < 0 + radius)
+            {
+                velocity.Y *= -1;
+                position.Y = 0 + radius;
+            }
+
+            if (position.Y > GameEnvironment.Screen.Y - radius)
+            {
+                velocity.Y *= -1;
+                position.Y = GameEnvironment.Screen.Y - radius;
+            }
+
             // step 5: Implement acceleration behaviour
             // step 7: Implement gravity behaviour
             // step 9: Implement inelastic behaviour

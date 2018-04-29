@@ -42,6 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GameObjects\Ball.cs" />
+    <Compile Include="GameObjects\PinkBall.cs" />
+    <Compile Include="GameObjects\GreenBall.cs" />
+    <Compile Include="GameObjects\PurpleBall.cs" />
     <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="Motion.cs" />
     <Compile Include="GameManagement\AnimatedGameObject.cs" />
